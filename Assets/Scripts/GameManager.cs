@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject[] targetPrefabs;
     public bool isGameOver;
     public List<Vector3> targetPositions;
+
+    public TextMeshProUGUI scoreText;
+    public GameObject gameOverPanel;
 
     private float minX = -3.75f;
     private float minY = -3.75f;
@@ -15,9 +19,12 @@ public class GameManager : MonoBehaviour
     private float spawnRate = 2f;
     private Vector3 randomPos;
 
+    private int score = 0;
 
     void Start()
     {
+        scoreText.text = $"Score: {score}";
+        gameOverPanel.SetActive(false);
         StartCoroutine(SpawnRandomTarget());
     }
 
@@ -56,5 +63,18 @@ public class GameManager : MonoBehaviour
         }
 
 
+    }
+
+    public void UpdateScore(int pointsToAdd)
+    {
+        score += pointsToAdd; // li diu que sumi punts de sa variable score a pointsToAdd
+        scoreText.text = $"Score: {score}"; //actualitza es texte cuan se clica a nes objectes
+    }
+
+
+    public void GameOver()
+    {
+        isGameOver = true;
+        gameOverPanel.SetActive(true);
     }
 }
