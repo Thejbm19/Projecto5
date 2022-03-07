@@ -11,8 +11,9 @@ public class Target : MonoBehaviour
    
     void Start()
     {
-        Destroy(gameObject, lifeTime);
         gameManagerScript = FindObjectOfType<GameManager>();
+        lifeTime = gameManagerScript.spawnRate;
+        Destroy(gameObject, lifeTime);
     }
 
    

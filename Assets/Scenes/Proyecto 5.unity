@@ -682,6 +682,8 @@ MonoBehaviour:
   targetPositions: []
   scoreText: {fileID: 698743694}
   gameOverPanel: {fileID: 288195540}
+  mainMenuPanel: {fileID: 968551458}
+  spawnRate: 2
 --- !u!4 &871139023
 Transform:
   m_ObjectHideFlags: 0
@@ -705,7 +707,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2289206504566041092, guid: 0958c92e49c12a148bfc5b7a59e895d2, type: 3}
       propertyPath: m_Name
-      value: Panel (1)
+      value: Main_Menu_Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581980497441402855, guid: 0958c92e49c12a148bfc5b7a59e895d2, type: 3}
+      propertyPath: m_Name
+      value: Title
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581980498008236215, guid: 0958c92e49c12a148bfc5b7a59e895d2, type: 3}
+      propertyPath: m_Name
+      value: Button_Easy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581980498314768151, guid: 0958c92e49c12a148bfc5b7a59e895d2, type: 3}
+      propertyPath: m_Name
+      value: Button_Hard
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581980498775622356, guid: 0958c92e49c12a148bfc5b7a59e895d2, type: 3}
+      propertyPath: m_Name
+      value: Button_Medium
       objectReference: {fileID: 0}
     - target: {fileID: 3576997084229969071, guid: 0958c92e49c12a148bfc5b7a59e895d2, type: 3}
       propertyPath: m_Pivot.x
@@ -797,15 +815,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6551159313824523393, guid: 0958c92e49c12a148bfc5b7a59e895d2, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.8490566
       objectReference: {fileID: 0}
     - target: {fileID: 6551159313824523393, guid: 0958c92e49c12a148bfc5b7a59e895d2, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.29236382
       objectReference: {fileID: 0}
     - target: {fileID: 6551159313824523393, guid: 0958c92e49c12a148bfc5b7a59e895d2, type: 3}
       propertyPath: m_Color.r
-      value: 0.14438558
+      value: 0.33673993
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0958c92e49c12a148bfc5b7a59e895d2, type: 3}
@@ -814,6 +832,65 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3576997084229969071, guid: 0958c92e49c12a148bfc5b7a59e895d2, type: 3}
   m_PrefabInstance: {fileID: 968551453}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &968551455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2581980498314768151, guid: 0958c92e49c12a148bfc5b7a59e895d2, type: 3}
+  m_PrefabInstance: {fileID: 968551453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &968551456 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2581980498008236215, guid: 0958c92e49c12a148bfc5b7a59e895d2, type: 3}
+  m_PrefabInstance: {fileID: 968551453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &968551457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2581980498775622356, guid: 0958c92e49c12a148bfc5b7a59e895d2, type: 3}
+  m_PrefabInstance: {fileID: 968551453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &968551458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2289206504566041092, guid: 0958c92e49c12a148bfc5b7a59e895d2, type: 3}
+  m_PrefabInstance: {fileID: 968551453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &968551459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968551455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a3485bd30de38d47b806511210e78aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficulty: 3
+--- !u!114 &968551460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968551456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a3485bd30de38d47b806511210e78aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficulty: 1
+--- !u!114 &968551461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968551457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a3485bd30de38d47b806511210e78aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficulty: 2
 --- !u!1 &1043111703
 GameObject:
   m_ObjectHideFlags: 0
